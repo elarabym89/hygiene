@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hygiene Coordination Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Hygiene Coordination Tracker</h1>
+      <p>Track daily outreach, appointments booked, and conversion metrics.</p>
+    </header>
+
+    <section class="card">
+      <h2>Add Interaction</h2>
+      <form id="interaction-form">
+        <div class="grid">
+          <label>
+            Patient Name
+            <input type="text" id="patientName" required />
+          </label>
+
+          <label>
+            Contact Date
+            <input type="date" id="contactDate" required />
+          </label>
+
+          <label>
+            Outreach Owner
+            <input type="text" id="owner" placeholder="Team member" />
+          </label>
+
+          <label>
+            Contact Outcome
+            <select id="outcome">
+              <option value="No Response">No Response</option>
+              <option value="Reached">Reached</option>
+              <option value="Scheduled">Scheduled</option>
+              <option value="Do Not Contact">Do Not Contact</option>
+            </select>
+          </label>
+        </div>
+
+        <fieldset>
+          <legend>Contact Channels Used</legend>
+          <label><input type="checkbox" id="texted" /> Texted</label>
+          <label><input type="checkbox" id="emailed" /> Emailed</label>
+          <label><input type="checkbox" id="voicemail" /> Left voicemail</label>
+          <label><input type="checkbox" id="called" /> Spoke by call</label>
+        </fieldset>
+
+        <div class="grid">
+          <label>
+            Appointment Booked?
+            <select id="appointmentBooked" required>
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </label>
+
+          <label>
+            Follow-up Date
+            <input type="date" id="followUpDate" />
+          </label>
+        </div>
+
+        <label>
+          Notes
+          <textarea id="notes" rows="3" placeholder="Helpful context for next outreach"></textarea>
+        </label>
+
+        <div class="actions">
+          <button type="submit">Add Entry</button>
+          <button type="button" id="reset-day" class="secondary">Clear Today's Entries</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Daily Performance Snapshot</h2>
+      <p id="snapshot-date"></p>
+      <div id="metrics" class="metrics"></div>
+    </section>
+
+    <section class="card">
+      <div class="table-header">
+        <h2>Today&apos;s Entries</h2>
+        <div class="actions">
+          <button type="button" id="export-csv">Export CSV</button>
+          <button type="button" id="export-json" class="secondary">Export JSON</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Patient</th>
+              <th>Date</th>
+              <th>Owner</th>
+              <th>Channels</th>
+              <th>Booked</th>
+              <th>Outcome</th>
+              <th>Follow-up</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody id="entries-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
