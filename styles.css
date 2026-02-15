@@ -1,0 +1,145 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f7fb;
+  color: #1f2a37;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+header h1 {
+  margin-bottom: 0.3rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 1px 6px rgba(15, 23, 42, 0.1);
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.92rem;
+  margin-bottom: 0.5rem;
+}
+
+fieldset {
+  border: 1px solid #d7deea;
+  border-radius: 8px;
+  margin: 0.8rem 0;
+  padding: 0.8rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+fieldset label {
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid #c7d1e0;
+  border-radius: 6px;
+  padding: 0.45rem;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 0.55rem 0.85rem;
+  cursor: pointer;
+  background: #0b66ff;
+  color: white;
+  font-weight: 600;
+}
+
+button.secondary {
+  background: #e4ebf8;
+  color: #1f2a37;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.8rem;
+}
+
+.metric {
+  background: #f7faff;
+  border: 1px solid #dbe6f8;
+  padding: 0.7rem;
+  border-radius: 8px;
+}
+
+.metric .label {
+  font-size: 0.86rem;
+  color: #4a5b72;
+}
+
+.metric .value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 0.2rem;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.7rem;
+}
+
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid #e4ebf8;
+  padding: 0.45rem;
+  font-size: 0.9rem;
+  vertical-align: top;
+}
